@@ -1,0 +1,628 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25813,        620]
+NotebookOptionsPosition[     24204,        586]
+NotebookOutlinePosition[     24602,        602]
+CellTagsIndexPosition[     24559,        599]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"joukowski", "[", 
+   RowBox[{"{", 
+    RowBox[{"x_", ",", "y_"}], "}"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}], "+", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["1", "2"], 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}]], 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "y"}]}], "}"}]}]}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 7558.},
+ InitializationCell->True,
+ CellChangeTimes->{{3.657539166109869*^9, 3.65753916785708*^9}, 
+   3.760820229472067*^9, {3.783266659063147*^9, 3.7832666670762978`*^9}},
+ CellLabel->"In[4]:=",
+ CellID->133226375,ExpressionUUID->"f0cf2de9-1bc2-4457-bf97-5b88af592bfc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"s", ",", "circle"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"circle", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"radius", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Cos", "[", "#", "]"}], ",", 
+              RowBox[{"Sin", "[", "#", "]"}]}], "}"}]}], "+", "center"}], 
+          "&"}]}], ";", 
+        RowBox[{"ParametricPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"circle", "[", "\[Theta]", "]"}], ",", 
+            RowBox[{"joukowski", "[", 
+             RowBox[{"circle", "[", "\[Theta]", "]"}], "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\[Theta]", ",", "0", ",", 
+            RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+          RowBox[{"PlotRange", "->", "2.5"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Red"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "->", 
+           RowBox[{"{", 
+            RowBox[{"480", ",", "480"}], "}"}]}]}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"center", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", "Locator"}], "}"}], 
+     ",", 
+     RowBox[{"SaveDefinitions", "->", "True"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"radius", ",", "1", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.783265952807705*^9, 3.78326597842087*^9}, {
+   3.783266157440915*^9, 3.783266196673921*^9}, 3.783266381734548*^9, {
+   3.783266435633831*^9, 3.783266479955553*^9}, {3.7832665268269987`*^9, 
+   3.783266562892578*^9}, 3.783266671677969*^9, {3.783270605166198*^9, 
+   3.783270605389031*^9}, 3.783273603650259*^9, {3.7832747352815933`*^9, 
+   3.7832747486779013`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"9adb88df-044a-4a85-9665-45bc3eaac6c1"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`radius$$ = 1.294, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`radius$$], 1, 2}}, Typeset`size$$ = {
+    531., {270., 276.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`radius$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Manipulate[
+        Module[{$CellContext`s$, $CellContext`circle$}, $CellContext`circle$ = \
+$CellContext`radius$$ {
+              Cos[#], 
+              Sin[#]} + $CellContext`center& ; ParametricPlot[{
+            $CellContext`circle$[$CellContext`\[Theta]], 
+            $CellContext`joukowski[
+             $CellContext`circle$[$CellContext`\[Theta]]]}, {$CellContext`\
+\[Theta], 0, 2 Pi}, PlotRange -> 2.5, 
+           PlotStyle -> {{Thick, Blue}, {Thick, Red}}, 
+           ImageSize -> {480, 480}]], {{$CellContext`center, {0, 0}}, 
+         Locator}, SaveDefinitions -> True], 
+      "Specifications" :> {{$CellContext`radius$$, 1, 2}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{576., {316., 322.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.783265911351572*^9, {3.783265953800501*^9, 3.783265979765164*^9}, {
+   3.783266167872319*^9, 3.783266197208024*^9}, 3.783266384572187*^9, {
+   3.783266436827133*^9, 3.78326648048652*^9}, {3.783266527490732*^9, 
+   3.783266564160968*^9}, 3.7832666726149397`*^9, {3.7832706012127047`*^9, 
+   3.783270605937367*^9}, 3.783273604662492*^9, 3.783274749054834*^9, 
+   3.7832750830900993`*^9, 3.783275200570299*^9, 3.783275238234929*^9, 
+   3.815830496322822*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"f86f27a1-bef3-4684-9f5c-0263b17c0c1e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"circle", ",", "traj", ",", "traj2"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"circle", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"radius", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Cos", "[", "#", "]"}], ",", 
+              RowBox[{"Sin", "[", "#", "]"}]}], "}"}]}], "+", "center"}], 
+          "&"}]}], ";", 
+        RowBox[{"traj", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"stream", "+", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{
+                RowBox[{"stream", "^", "2"}], "+", 
+                RowBox[{"4", " ", 
+                 RowBox[{"radius", "^", "2"}], " ", 
+                 RowBox[{
+                  RowBox[{"Sin", "[", "#", "]"}], "^", "2"}]}]}], "]"}]}], 
+             ")"}], " ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Cos", "[", "#", "]"}], ",", 
+                RowBox[{"Sin", "[", "#", "]"}]}], "}"}], "/", "2"}], "/", 
+             RowBox[{"Sin", "[", "#", "]"}]}]}], "+", "center"}], "&"}]}], 
+        ";", 
+        RowBox[{"traj2", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "stream"}], "-", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{
+                RowBox[{"stream", "^", "2"}], "+", 
+                RowBox[{"4", " ", 
+                 RowBox[{"radius", "^", "2"}], " ", 
+                 RowBox[{
+                  RowBox[{"Sin", "[", "#", "]"}], "^", "2"}]}]}], "]"}]}], 
+             ")"}], " ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Cos", "[", "#", "]"}], ",", 
+                RowBox[{"Sin", "[", "#", "]"}]}], "}"}], "/", "2"}], "/", 
+             RowBox[{"Sin", "[", "#", "]"}]}]}], "+", "center"}], "&"}]}], 
+        ";", 
+        RowBox[{"ParametricPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"circle", "[", "\[Theta]", "]"}], ",", 
+            RowBox[{"circle", "[", 
+             RowBox[{"-", "\[Theta]"}], "]"}], ",", 
+            RowBox[{"traj", "[", "\[Theta]", "]"}], ",", 
+            RowBox[{"traj2", "[", 
+             RowBox[{"-", "\[Theta]"}], "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]"}], "}"}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", "3.5"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Red"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Red"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "->", 
+           RowBox[{"{", 
+            RowBox[{"480", ",", "480"}], "}"}]}]}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"center", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", "Locator"}], "}"}], 
+     ",", 
+     RowBox[{"SaveDefinitions", "->", "True"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"stream", ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"radius", ",", "1", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7832716857872677`*^9, {3.7832717223017807`*^9, 3.7832718765650997`*^9}, {
+   3.7832719645116253`*^9, 3.7832720742479973`*^9}, {3.783272121822826*^9, 
+   3.783272236452106*^9}, {3.783272281406723*^9, 3.783272321603788*^9}, {
+   3.783272376978849*^9, 3.783272398327434*^9}, {3.783272428998466*^9, 
+   3.783272503307231*^9}, {3.783272562188767*^9, 3.783272638972785*^9}, {
+   3.783272674433915*^9, 3.783272679215723*^9}, {3.783272790402103*^9, 
+   3.783272817265581*^9}, {3.783272855596649*^9, 3.78327315637659*^9}, {
+   3.783274025953862*^9, 3.78327413510708*^9}, {3.783274464499549*^9, 
+   3.783274478980851*^9}, {3.783274902923068*^9, 3.7832749298431664`*^9}, {
+   3.7832751530629168`*^9, 3.783275179713719*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"5670dbf5-a4a9-4137-825d-75f9dd7694ff"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`radius$$ = 1.062, $CellContext`stream$$ = 
+    0.035, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`stream$$], 0, 2}, {
+      Hold[$CellContext`radius$$], 1, 2}}, Typeset`size$$ = {
+    531., {270., 276.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`radius$$ = 1, $CellContext`stream$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Manipulate[
+        Module[{$CellContext`circle$, $CellContext`traj$, \
+$CellContext`traj2$}, $CellContext`circle$ = $CellContext`radius$$ {
+              Cos[#], 
+              
+              Sin[#]} + $CellContext`center& ; $CellContext`traj$ = \
+($CellContext`stream$$ + 
+             Sqrt[$CellContext`stream$$^2 + 
+               4 $CellContext`radius$$^2 Sin[#]^2]) (({
+                Cos[#], 
+                Sin[#]}/2)/
+             Sin[#]) + $CellContext`center& ; $CellContext`traj2$ = \
+(-$CellContext`stream$$ - 
+             Sqrt[$CellContext`stream$$^2 + 
+              4 $CellContext`radius$$^2 Sin[#]^2]) (({
+                Cos[#], 
+                Sin[#]}/2)/Sin[#]) + $CellContext`center& ; ParametricPlot[{
+            $CellContext`circle$[$CellContext`\[Theta]], 
+            $CellContext`circle$[-$CellContext`\[Theta]], 
+            $CellContext`traj$[$CellContext`\[Theta]], 
+            $CellContext`traj2$[-$CellContext`\[Theta]]}, {$CellContext`\
+\[Theta], 0, Pi}, PlotRange -> 3.5, 
+           PlotStyle -> {{Thick, Blue}, {Thick, Blue}, {Thick, Red}, {
+             Thick, Red}}, ImageSize -> {480, 480}]], {{$CellContext`center, {
+          0, 0}}, Locator}, SaveDefinitions -> True], 
+      "Specifications" :> {{$CellContext`stream$$, 0, 
+         2}, {$CellContext`radius$$, 1, 2}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{576., {330., 336.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.783272503681539*^9, {3.783272563573165*^9, 3.783272568309264*^9}, {
+   3.7832726103520603`*^9, 3.783272639252029*^9}, {3.7832726746790667`*^9, 
+   3.783272679517295*^9}, {3.7832727908588743`*^9, 3.783272817876986*^9}, {
+   3.783272856031673*^9, 3.783272971941433*^9}, {3.783273022678508*^9, 
+   3.783273077327651*^9}, {3.7832731171008177`*^9, 3.783273157034925*^9}, 
+   3.783274027113813*^9, {3.783274062298121*^9, 3.783274077901312*^9}, {
+   3.7832741160749283`*^9, 3.783274135783203*^9}, 3.783274481352767*^9, {
+   3.78327490998997*^9, 3.783274930382319*^9}, 3.783275085995286*^9, {
+   3.783275181007358*^9, 3.7832751881685133`*^9}, 3.815830560752095*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"cff25665-101a-4112-aa99-492972cf52aa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"circle", ",", "traj", ",", "traj2"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"circle", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"radius", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Cos", "[", "#", "]"}], ",", 
+              RowBox[{"Sin", "[", "#", "]"}]}], "}"}]}], "+", "center"}], 
+          "&"}]}], ";", 
+        RowBox[{"traj", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"stream", "+", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{
+                RowBox[{"stream", "^", "2"}], "+", 
+                RowBox[{"4", " ", 
+                 RowBox[{"radius", "^", "2"}], " ", 
+                 RowBox[{
+                  RowBox[{"Sin", "[", "#", "]"}], "^", "2"}]}]}], "]"}]}], 
+             ")"}], " ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Cos", "[", "#", "]"}], ",", 
+                RowBox[{"Sin", "[", "#", "]"}]}], "}"}], "/", "2"}], "/", 
+             RowBox[{"Sin", "[", "#", "]"}]}]}], "+", "center"}], "&"}]}], 
+        ";", 
+        RowBox[{"traj2", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "stream"}], "-", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{
+                RowBox[{"stream", "^", "2"}], "+", 
+                RowBox[{"4", " ", 
+                 RowBox[{"radius", "^", "2"}], " ", 
+                 RowBox[{
+                  RowBox[{"Sin", "[", "#", "]"}], "^", "2"}]}]}], "]"}]}], 
+             ")"}], " ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Cos", "[", "#", "]"}], ",", 
+                RowBox[{"Sin", "[", "#", "]"}]}], "}"}], "/", "2"}], "/", 
+             RowBox[{"Sin", "[", "#", "]"}]}]}], "+", "center"}], "&"}]}], 
+        ";", 
+        RowBox[{"ParametricPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"joukowski", "[", 
+             RowBox[{"circle", "[", "\[Theta]", "]"}], "]"}], ",", 
+            RowBox[{"joukowski", "[", 
+             RowBox[{"circle", "[", 
+              RowBox[{"-", "\[Theta]"}], "]"}], "]"}], ",", 
+            RowBox[{"joukowski", "[", 
+             RowBox[{"traj", "[", "\[Theta]", "]"}], "]"}], ",", 
+            RowBox[{"joukowski", "[", 
+             RowBox[{"traj2", "[", 
+              RowBox[{"-", "\[Theta]"}], "]"}], "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]"}], "}"}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", "3.5"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Red"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Red"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "->", 
+           RowBox[{"{", 
+            RowBox[{"480", ",", "480"}], "}"}]}]}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"center", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", "Locator"}], "}"}], 
+     ",", 
+     RowBox[{"SaveDefinitions", "->", "True"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"stream", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"radius", ",", "1", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7832716857872677`*^9, {3.7832717223017807`*^9, 3.7832718765650997`*^9}, {
+   3.7832719645116253`*^9, 3.7832720742479973`*^9}, {3.783272121822826*^9, 
+   3.783272236452106*^9}, {3.783272281406723*^9, 3.783272321603788*^9}, {
+   3.783272376978849*^9, 3.783272398327434*^9}, {3.783272428998466*^9, 
+   3.783272503307231*^9}, {3.783272562188767*^9, 3.783272638972785*^9}, {
+   3.783272674433915*^9, 3.783272679215723*^9}, {3.783272790402103*^9, 
+   3.783272817265581*^9}, {3.783272855596649*^9, 3.78327315637659*^9}, {
+   3.783273196750667*^9, 3.783273257636355*^9}, 3.7832732930211897`*^9, {
+   3.7832733251497498`*^9, 3.7832733674298067`*^9}, {3.7832735005303*^9, 
+   3.783273527687866*^9}, {3.783273612076833*^9, 3.783273680400124*^9}, 
+   3.7832740115918913`*^9, {3.7832741427735863`*^9, 3.7832741596604*^9}, {
+   3.7832741906817513`*^9, 3.783274247736148*^9}, {3.783274410530559*^9, 
+   3.783274427427685*^9}, {3.783275119467257*^9, 3.783275133316552*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"b90ba73e-d2d6-4a19-8e67-5a346d63de18"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`radius$$ = 1.21, $CellContext`stream$$ = 
+    0.042, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`stream$$], 0, 1}, {
+      Hold[$CellContext`radius$$], 1, 2}}, Typeset`size$$ = {
+    531., {270., 276.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`radius$$ = 1, $CellContext`stream$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Manipulate[
+        Module[{$CellContext`circle$, $CellContext`traj$, \
+$CellContext`traj2$}, $CellContext`circle$ = $CellContext`radius$$ {
+              Cos[#], 
+              
+              Sin[#]} + $CellContext`center& ; $CellContext`traj$ = \
+($CellContext`stream$$ + 
+             Sqrt[$CellContext`stream$$^2 + 
+               4 $CellContext`radius$$^2 Sin[#]^2]) (({
+                Cos[#], 
+                Sin[#]}/2)/
+             Sin[#]) + $CellContext`center& ; $CellContext`traj2$ = \
+(-$CellContext`stream$$ - 
+             Sqrt[$CellContext`stream$$^2 + 
+              4 $CellContext`radius$$^2 Sin[#]^2]) (({
+                Cos[#], 
+                Sin[#]}/2)/Sin[#]) + $CellContext`center& ; ParametricPlot[{
+            $CellContext`joukowski[
+             $CellContext`circle$[$CellContext`\[Theta]]], 
+            $CellContext`joukowski[
+             $CellContext`circle$[-$CellContext`\[Theta]]], 
+            $CellContext`joukowski[
+             $CellContext`traj$[$CellContext`\[Theta]]], 
+            $CellContext`joukowski[
+             $CellContext`traj2$[-$CellContext`\[Theta]]]}, {$CellContext`\
+\[Theta], 0, Pi}, PlotRange -> 3.5, 
+           PlotStyle -> {{Thick, Blue}, {Thick, Blue}, {Thick, Red}, {
+             Thick, Red}}, ImageSize -> {480, 480}]], {{$CellContext`center, {
+          0, 0}}, Locator}, SaveDefinitions -> True], 
+      "Specifications" :> {{$CellContext`stream$$, 0, 
+         1}, {$CellContext`radius$$, 1, 2}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{576., {330., 336.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.783274160071409*^9, 3.783274191884577*^9, {3.783274240000453*^9, 
+   3.7832742483347816`*^9}, 3.783274428369088*^9, 3.783274545703198*^9, 
+   3.7832750881930304`*^9, 3.783275140504673*^9, 3.783275191411496*^9, 
+   3.8158305684646606`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"659035a0-98bd-495b-90ea-c7a6fe67084c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Infinity", "indet", 
+   "\"Indeterminate expression \\!\\(\\*RowBox[{\\\"0.`\\\", \\\" \\\", \
+\\\"ComplexInfinity\\\"}]\\) encountered.\"", 2, 8, 11, 19378559083354975481, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.815830578099276*^9},
+ CellLabel->"",ExpressionUUID->"ceaf97f8-6607-4818-b945-fd2446dc67e3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Infinity", "indet", 
+   "\"Indeterminate expression \\!\\(\\*RowBox[{\\\"0.`\\\", \\\" \\\", \
+\\\"ComplexInfinity\\\"}]\\) encountered.\"", 2, 8, 12, 19378559083354975481, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.815830578186407*^9},
+ CellLabel->"",ExpressionUUID->"1689a55b-45fb-4f3b-a6b6-a8dc87582f54"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Infinity", "indet", 
+   "\"Indeterminate expression \\!\\(\\*RowBox[{\\\"0.`\\\", \\\" \\\", \
+\\\"ComplexInfinity\\\"}]\\) encountered.\"", 2, 8, 13, 19378559083354975481, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.815834081318571*^9},
+ CellLabel->"",ExpressionUUID->"d36bfe1e-4c80-4488-96f8-b9f1a187c1b4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Infinity", "indet", 
+   "\"Indeterminate expression \\!\\(\\*RowBox[{\\\"0.`\\\", \\\" \\\", \
+\\\"ComplexInfinity\\\"}]\\) encountered.\"", 2, 8, 14, 19378559083354975481, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8158340815016336`*^9},
+ CellLabel->"",ExpressionUUID->"9a75054f-5f9b-46c7-9034-33a24272b722"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7832738254561977`*^9, 
+  3.78327382911843*^9}},ExpressionUUID->"6c11fb7b-9e78-4ff0-9739-\
+34bb5cdd4e6f"]
+},
+WindowSize->{1165, 755},
+WindowMargins->{{Automatic, -1598}, {Automatic, 412}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9db40b7a-aba9-4f52-ac9a-c28f6fcb8421"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 751, 22, 70, "Input",ExpressionUUID->"f0cf2de9-1bc2-4457-bf97-5b88af592bfc",
+ CellGroupingRules->{"GroupTogetherGrouping", 7558.},
+ InitializationCell->True,
+ CellID->133226375],
+Cell[CellGroupData[{
+Cell[1334, 46, 2208, 56, 73, "Input",ExpressionUUID->"9adb88df-044a-4a85-9665-45bc3eaac6c1"],
+Cell[3545, 104, 2564, 50, 657, "Output",ExpressionUUID->"f86f27a1-bef3-4684-9f5c-0263b17c0c1e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6146, 159, 4540, 114, 136, "Input",ExpressionUUID->"5670dbf5-a4a9-4137-825d-75f9dd7694ff"],
+Cell[10689, 275, 3547, 68, 685, "Output",ExpressionUUID->"cff25665-101a-4112-aa99-492972cf52aa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14273, 348, 4975, 121, 136, "Input",ExpressionUUID->"b90ba73e-d2d6-4a19-8e67-5a346d63de18"],
+Cell[19251, 471, 3279, 67, 685, "Output",ExpressionUUID->"659035a0-98bd-495b-90ea-c7a6fe67084c"],
+Cell[22533, 540, 372, 8, 24, "Message",ExpressionUUID->"ceaf97f8-6607-4818-b945-fd2446dc67e3"],
+Cell[22908, 550, 372, 8, 24, "Message",ExpressionUUID->"1689a55b-45fb-4f3b-a6b6-a8dc87582f54"],
+Cell[23283, 560, 372, 8, 24, "Message",ExpressionUUID->"d36bfe1e-4c80-4488-96f8-b9f1a187c1b4"],
+Cell[23658, 570, 374, 8, 24, "Message",ExpressionUUID->"9a75054f-5f9b-46c7-9034-33a24272b722"]
+}, Open  ]],
+Cell[24047, 581, 153, 3, 30, "Input",ExpressionUUID->"6c11fb7b-9e78-4ff0-9739-34bb5cdd4e6f"]
+}
+]
+*)
+
